@@ -1,0 +1,12 @@
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\VendedorGalatico.Core\bin\Debug\VendedorGalatico.Core.dll.config
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\VendedorGalatico.Core\bin\Debug\VendedorGalatico.Core.dll
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\VendedorGalatico.Core\bin\Debug\VendedorGalatico.Core.pdb
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\VendedorGalatico.Core\obj\Debug\VendedorGalatico.Core.dll
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\VendedorGalatico.Core\obj\Debug\VendedorGalatico.Core.pdb
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\VendedorGalatico.Core\obj\Debug\VendedorGalatico.Core.csprojResolveAssemblyReference.cache
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\VendedorGalatico.Core\bin\Debug\VendedorGalatico.Core.dll.config
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\VendedorGalatico.Core\bin\Debug\VendedorGalatico.Core.dll
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\VendedorGalatico.Core\bin\Debug\VendedorGalatico.Core.pdb
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\VendedorGalatico.Core\obj\Debug\VendedorGalatico.Core.csprojResolveAssemblyReference.cache
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\VendedorGalatico.Core\obj\Debug\VendedorGalatico.Core.dll
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\VendedorGalatico.Core\obj\Debug\VendedorGalatico.Core.pdb

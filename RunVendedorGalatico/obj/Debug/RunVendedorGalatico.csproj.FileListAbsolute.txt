@@ -1,0 +1,18 @@
+c:\users\marcos.honatel\documents\visual studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\bin\Debug\RunVendedorGalatico.exe.config
+c:\users\marcos.honatel\documents\visual studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\bin\Debug\RunVendedorGalatico.exe
+c:\users\marcos.honatel\documents\visual studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\bin\Debug\RunVendedorGalatico.pdb
+c:\users\marcos.honatel\documents\visual studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\obj\Debug\RunVendedorGalatico.csprojResolveAssemblyReference.cache
+c:\users\marcos.honatel\documents\visual studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\obj\Debug\RunVendedorGalatico.exe
+c:\users\marcos.honatel\documents\visual studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\obj\Debug\RunVendedorGalatico.pdb
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\bin\Debug\VendedorGalatico.Core.dll
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\bin\Debug\VendedorGalatico.Core.pdb
+C:\Users\marcos.honatel\Documents\Visual Studio 2017\Projects\VendedorGalatico\RunVendedorGalatico\bin\Debug\VendedorGalatico.Core.dll.config
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\bin\Debug\RunVendedorGalatico.exe.config
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\bin\Debug\RunVendedorGalatico.exe
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\bin\Debug\RunVendedorGalatico.pdb
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\bin\Debug\VendedorGalatico.Core.dll
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\bin\Debug\VendedorGalatico.Core.pdb
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\bin\Debug\VendedorGalatico.Core.dll.config
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\obj\Debug\RunVendedorGalatico.csprojResolveAssemblyReference.cache
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\obj\Debug\RunVendedorGalatico.exe
+C:\Users\silva\Desktop\Exercicio tw\VendedorGalatico\VendedorGalatico\RunVendedorGalatico\obj\Debug\RunVendedorGalatico.pdb
