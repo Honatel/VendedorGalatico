@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VendedorGalatico.Core.Enums;
 using VendedorGalatico.Core.TagsOfInput;
 
 namespace VendedorGalatico.Core.Helper
@@ -29,6 +30,18 @@ namespace VendedorGalatico.Core.Helper
                     return 1000;
             }
             return 0;
+        }
+
+        public static TagsDeEntrada SetValueInput(List<TagsDeEntrada> tagsEntradas)
+        {
+            foreach (var item in tagsEntradas)
+            {
+                if (item.TipoEntrada == TipoEntrada.ValorRomano)
+                    tagsEntradas[0].Valor = GetValue(item.NomeTag);
+            }
+            var tag = tagsEntradas[0];
+
+            return tag;
         }
     }
 }

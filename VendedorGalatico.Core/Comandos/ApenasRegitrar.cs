@@ -13,22 +13,17 @@ namespace VendedorGalatico.Core.Comandos
     {
         public override ResultProcessamento Executar(string[] inputString, List<TagsDeEntrada> tagsEntradas)
         {
-            var tag = SetValueInput(tagsEntradas);
-            TagsRomanos.Add(tag);
-
-           return new ResultProcessamento { Mensagem = $"{tag.NomeTag} Registrada com sucesso!"};
-        }
-        
-        private TagsDeEntrada SetValueInput(List<TagsDeEntrada> tagsEntradas)
-        {
-            foreach (var item in tagsEntradas)
+            try
             {
-                if (item.TipoEntrada == TipoEntrada.ValorRomano)
-                    tagsEntradas[0].Valor = ValoresRomanos.GetValue(item.NomeTag);
-            }
-            var tag = tagsEntradas[0];
+                var tag = ValoresRomanos.SetValueInput(tagsEntradas);
+                TagsArmazenadas.Add(tag);
 
-            return tag;
+                return new ResultProcessamento { Mensagem = $"{tag.NomeTag} Registrada com sucesso!", Success = true };
+            }
+            catch (Exception)
+            {
+                return new ResultProcessamento { Mensagem = "Eu não sei o que você esta dizendo" };
+            }
         }
     }
 }
