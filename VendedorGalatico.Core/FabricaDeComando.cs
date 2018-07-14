@@ -49,7 +49,7 @@ namespace VendedorGalatico.Core
                 && argumentos.First().TipoEntrada == TipoEntrada.Constante 
                 && argumentos.Last().TipoEntrada == TipoEntrada.ValorRomano)
                 return new ApenasRegitrar();
-            else if (argumentos.Any(x => x.TipoEntrada == TipoEntrada.ConstanteSemValor) 
+            else if (argumentos.Any(x => x.TipoEntrada == TipoEntrada.ConstantePrincipalSemValor) 
                 && !argumentos.Any(x => x.TipoEntrada == TipoEntrada.OperadorPergunta))
                 return new RegistraECalculaExpressao();
             else if (argumentos.Any(x => x.TipoEntrada == TipoEntrada.OperadorPergunta))

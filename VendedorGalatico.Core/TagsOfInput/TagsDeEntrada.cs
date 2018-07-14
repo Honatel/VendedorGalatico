@@ -56,7 +56,7 @@ namespace VendedorGalatico.Core.TagsOfInput
             if (IsNumero)
                 return TipoEntrada.ValorNumerico;
 
-            return input.Any(x => Char.IsUpper(x)) ? TipoEntrada.ConstanteSemValor : TipoEntrada.Constante;
+            return input.Any(x => Char.IsUpper(x)) ? TipoEntrada.ConstantePrincipalSemValor : TipoEntrada.Constante;
         }
     }
 }

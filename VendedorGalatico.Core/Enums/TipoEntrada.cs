@@ -11,7 +11,8 @@ namespace VendedorGalatico.Core.Enums
         Constante, 
         Operador,
         ValorRomano,
-        ConstanteSemValor,
+        ConstantePrincipalSemValor,
+        ConstantePrincipalComValor,
         OperadorPergunta,
         Pergunta, // how
         Substantivo, // much  many

@@ -29,7 +29,7 @@ namespace VendedorGalatico.Core.Comandos
             return contatntesEntrada;
         }
 
-        public static int GetValorExpressaRomanos(List<TagsDeEntrada> constatantes)
+        public static int GetValorExpressaoRomanos(List<TagsDeEntrada> constatantes)
         {
             var result = 0;
             var valorAnterior = 0;
@@ -41,7 +41,7 @@ namespace VendedorGalatico.Core.Comandos
                             : (int)item.Valor - valorAnterior
                         : valorAnterior + (int)item.Valor;
 
-                valorAnterior = (int)item.Valor;
+                valorAnterior = result;
             };
             return result;
         }

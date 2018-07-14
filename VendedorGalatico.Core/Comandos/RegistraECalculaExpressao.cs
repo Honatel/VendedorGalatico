@@ -16,12 +16,10 @@ namespace VendedorGalatico.Core.Comandos
             try
             {
                 var constatantes = GetTagsDeConstantesSalvas(tagsEntradas.Where(x => x.TipoEntrada == TipoEntrada.Constante).ToList());// obtive as contantes que estão armazenadas.
+                var consSemValor = tagsEntradas.First(x => x.TipoEntrada == TipoEntrada.ConstantePrincipalSemValor);// obtive as contantes sem valor.
 
-                var consSemValor = tagsEntradas.First(x => x.TipoEntrada == TipoEntrada.ConstanteSemValor);// obtive as contantes sem valor.
-                var valorNumerico = tagsEntradas.First(x => x.TipoEntrada == TipoEntrada.ValorNumerico).NomeTag;
-
-                consSemValor.Valor = CalcularExpressao(constatantes, Convert.ToInt32(valorNumerico));
-                consSemValor.TipoEntrada = TipoEntrada.Constante;
+                consSemValor.Valor = CalcularExpressao(constatantes, Convert.ToInt32(tagsEntradas.First(x => x.TipoEntrada == TipoEntrada.ValorNumerico).NomeTag));
+                consSemValor.TipoEntrada = TipoEntrada.ConstantePrincipalComValor;
 
                 TagsArmazenadas.Add(consSemValor);
 
@@ -35,13 +33,13 @@ namespace VendedorGalatico.Core.Comandos
             }
             catch (Exception)
             {
-                return new ResultProcessamento { Mensagem = "Eu não sei o que você esta dizendo", Success = true };
+                return new ResultProcessamento { Mensagem = "Eu não sei o que você esta dizendo", Success = false };
             }
         }
 
         private double CalcularExpressao(List<TagsDeEntrada> constatantes, int valor)
         {
-            int result = GetValorExpressaRomanos(constatantes);
+            int result = GetValorExpressaoRomanos(constatantes);
 
             return valor / result;
         }
