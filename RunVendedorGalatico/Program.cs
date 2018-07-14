@@ -11,7 +11,7 @@ namespace RunVendedorGalatico
     {
         static void Main(string[] args)
         { 
-        var processarImput = new ProcessarInput();
+        var processarInput = new ProcessarInput();
 
             while (true)
             {
@@ -20,7 +20,7 @@ namespace RunVendedorGalatico
                 var resultado = Console.ReadLine();
                 if (resultado == "sair") break;
 
-                var reposta = processarImput.Pocessar(resultado);
+                var reposta = processarInput.Pocessar(resultado);
                 Console.WriteLine(reposta.Mensagem);
             }
         }

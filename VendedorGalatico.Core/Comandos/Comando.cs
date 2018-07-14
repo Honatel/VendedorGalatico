@@ -8,19 +8,19 @@ namespace VendedorGalatico.Core.Comandos
 {
     public abstract class Comando
     {
-        public static List<TagsDeEntrada> TagsArmazenadas { get; set; }
-        public List<TagsDeEntrada> Tags{ get; set; }
+        public static List<CaracterDeEntrada> TagsArmazenadas { get; set; }
+        public List<CaracterDeEntrada> Tags{ get; set; }
 
         public Comando()
         {
-            TagsArmazenadas = TagsArmazenadas??new List<TagsDeEntrada>();
+            TagsArmazenadas = TagsArmazenadas??new List<CaracterDeEntrada>();
         }
 
-        public abstract ResultProcessamento Executar(string[] inputString, List<TagsDeEntrada> tagsEntradas);
+        public abstract ResultProcessamento Executar(string[] inputString, List<CaracterDeEntrada> tagsEntradas);
 
-        public List<TagsDeEntrada> GetTagsDeConstantesSalvas(List<TagsDeEntrada> list)
+        public List<CaracterDeEntrada> GetTagsDeConstantesSalvas(List<CaracterDeEntrada> list)
         {
-            var contatntesEntrada = new List<TagsDeEntrada>();
+            var contatntesEntrada = new List<CaracterDeEntrada>();
             foreach (var item in list)
             {
                 var tagSalva = TagsArmazenadas.First(x => x.NomeTag == item.NomeTag);
@@ -29,7 +29,7 @@ namespace VendedorGalatico.Core.Comandos
             return contatntesEntrada;
         }
 
-        public static int GetValorExpressaoRomanos(List<TagsDeEntrada> constatantes)
+        public static int GetValorExpressaoRomanos(List<CaracterDeEntrada> constatantes)
         {
             var result = 0;
             var valorAnterior = 0;

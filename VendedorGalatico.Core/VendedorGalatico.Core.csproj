@@ -44,17 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comandos\RegistraECalculaExpressao.cs" />
-    <Compile Include="Comandos\ApenasRegitrar.cs" />
-    <Compile Include="Comandos\CalcularConsulta.cs" />
+    <Compile Include="Comandos\ComandoRegistraECalculaExpressao.cs" />
+    <Compile Include="Comandos\ComandoApenasRegitrar.cs" />
+    <Compile Include="Comandos\ComandoCalcularConsulta.cs" />
     <Compile Include="Comandos\Comando.cs" />
-    <Compile Include="Enums\TipoEntrada.cs" />
+    <Compile Include="Enums\TipoCaracterDeEntrada.cs" />
     <Compile Include="FabricaDeComando.cs" />
     <Compile Include="Helper\ResultProcessamento.cs" />
     <Compile Include="Helper\ValoresRomanos.cs" />
     <Compile Include="ProcessarInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TagsOfInput\TagsDeEntrada.cs" />
+    <Compile Include="TagsOfInput\CaracterDeEntrada.cs" />
     <Compile Include="TagsOfInput\ValorTagsDeEntrada.cs" />
   </ItemGroup>
   <ItemGroup>

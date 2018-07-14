@@ -8,19 +8,19 @@ using static VendedorGalatico.Core.TagsOfInput.ValorTagsDeEntrada;
 
 namespace VendedorGalatico.Core.TagsOfInput
 {
-    public class TagsDeEntrada
+    public class CaracterDeEntrada
     {
         public string NomeTag { get; set; }
-        public TipoEntrada TipoEntrada { get; set; }
+        public TipoCaracterDeEntrada TipoEntrada { get; set; }
         public double Valor { get; set; }
 
-        public TagsDeEntrada(string input)
+        public CaracterDeEntrada(string input)
         {
             NomeTag = input;
             TipoEntrada = GetTipoInput(input);
         }
 
-        private TipoEntrada GetTipoInput(string input)
+        private TipoCaracterDeEntrada GetTipoInput(string input)
         {
             switch (input)
             {
@@ -31,32 +31,31 @@ namespace VendedorGalatico.Core.TagsOfInput
                 case ValorTagsDeEntrada.SimbolosRomanos.C:
                 case ValorTagsDeEntrada.SimbolosRomanos.D:
                 case ValorTagsDeEntrada.SimbolosRomanos.M:
-                    return TipoEntrada.ValorRomano;
-                case ValorTagsDeEntrada.Operador.Is: 
-                    return TipoEntrada.Operador;
+                    return TipoCaracterDeEntrada.ValorRomano;
+                case ValorTagsDeEntrada.Operador.Is:
+                    return TipoCaracterDeEntrada.Operador;
                 case ValorTagsDeEntrada.Advervio.How:
-                    return TipoEntrada.Pergunta;
+                    return TipoCaracterDeEntrada.Pergunta;
                 case ValorTagsDeEntrada.OperadorPergunta.QueryCommandQualifier:
-                    return TipoEntrada.OperadorPergunta;
+                    return TipoCaracterDeEntrada.OperadorPergunta;
                 case ValorTagsDeEntrada.Substantivo.Many:
                 case ValorTagsDeEntrada.Substantivo.Much:
-                    return TipoEntrada.Substantivo;
+                    return TipoCaracterDeEntrada.Substantivo;
                 case TipoReservado.ValorTipoReservado:
-                    return TipoEntrada.TipoReservado;
+                    return TipoCaracterDeEntrada.TipoReservado;
                 default:
                     return GetTipoInputConstante(input);
-                    
-            }
 
+            }
         }
 
-        private TipoEntrada GetTipoInputConstante(string input)
+        private TipoCaracterDeEntrada GetTipoInputConstante(string input)
         {
             var IsNumero = int.TryParse(input, out int n);
             if (IsNumero)
-                return TipoEntrada.ValorNumerico;
+                return TipoCaracterDeEntrada.ValorNumerico;
 
-            return input.Any(x => Char.IsUpper(x)) ? TipoEntrada.ConstantePrincipalSemValor : TipoEntrada.Constante;
+            return input.Any(x => Char.IsUpper(x)) ? TipoCaracterDeEntrada.ConstantePrincipalSemValor : TipoCaracterDeEntrada.Constante;
         }
     }
 }

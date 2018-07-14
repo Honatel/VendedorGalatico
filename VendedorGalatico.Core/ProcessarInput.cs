@@ -12,7 +12,7 @@ namespace VendedorGalatico.Core
     public class ProcessarInput
     {
         private string[] inputString;
-        private List<TagsDeEntrada> InputsComValores = new List<TagsDeEntrada>();
+        private List<CaracterDeEntrada> InputsComValores = new List<CaracterDeEntrada>();
 
         public ResultProcessamento Pocessar(string resultado)
         {

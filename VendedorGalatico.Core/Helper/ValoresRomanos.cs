@@ -32,11 +32,11 @@ namespace VendedorGalatico.Core.Helper
             return 0;
         }
 
-        public static TagsDeEntrada SetValueInput(List<TagsDeEntrada> tagsEntradas)
+        public static CaracterDeEntrada SetValueInput(List<CaracterDeEntrada> tagsEntradas)
         {
             foreach (var item in tagsEntradas)
             {
-                if (item.TipoEntrada == TipoEntrada.ValorRomano)
+                if (item.TipoEntrada == TipoCaracterDeEntrada.ValorRomano)
                     tagsEntradas[0].Valor = GetValue(item.NomeTag);
             }
             var tag = tagsEntradas[0];

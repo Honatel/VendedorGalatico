@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VendedorGalatico.Core.Enums
 {
-    public enum TipoEntrada
+    public enum TipoCaracterDeEntrada
     {
         Constante, 
         Operador,
@@ -14,8 +14,8 @@ namespace VendedorGalatico.Core.Enums
         ConstantePrincipalSemValor,
         ConstantePrincipalComValor,
         OperadorPergunta,
-        Pergunta, // how
-        Substantivo, // much  many
+        Pergunta, 
+        Substantivo, 
         ValorNumerico,
         TipoReservado
     }

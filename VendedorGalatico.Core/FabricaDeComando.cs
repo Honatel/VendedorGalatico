@@ -16,14 +16,14 @@ namespace VendedorGalatico.Core
         {
             try
             {
-                var tagsEntradas = GetTagsDeEntrada(argumentos);
+                var caracteresDeEntrada = MontaCaracteresDeEntrada(argumentos);
 
-                var comando = GetComando(tagsEntradas);
+                var comando = FactoryComando(caracteresDeEntrada);
 
                 if (comando == null)
                     return new ResultProcessamento { Mensagem = "Eu não sei o que você esta falando" };
 
-                return comando.Executar(argumentos, tagsEntradas);
+                return comando.Executar(argumentos, caracteresDeEntrada);
             }
             catch (Exception Ex)
             {
@@ -31,29 +31,28 @@ namespace VendedorGalatico.Core
             }
         }
 
-
-        private static List<TagsDeEntrada> GetTagsDeEntrada(string[] inputString)
+        private static List<CaracterDeEntrada> MontaCaracteresDeEntrada(string[] inputString)
         {
-            var tags = new List<TagsDeEntrada>();
+            var tags = new List<CaracterDeEntrada>();
 
             foreach (var item in inputString)
             {
-                tags.Add(new TagsDeEntrada(item));
+                tags.Add(new CaracterDeEntrada(item));
             }
             return tags;
         }
 
-        private static Comando GetComando(List<TagsDeEntrada> argumentos)
+        private static Comando FactoryComando(List<CaracterDeEntrada> argumentos)
         {
             if (argumentos.Count() == 3 
-                && argumentos.First().TipoEntrada == TipoEntrada.Constante 
-                && argumentos.Last().TipoEntrada == TipoEntrada.ValorRomano)
-                return new ApenasRegitrar();
-            else if (argumentos.Any(x => x.TipoEntrada == TipoEntrada.ConstantePrincipalSemValor) 
-                && !argumentos.Any(x => x.TipoEntrada == TipoEntrada.OperadorPergunta))
-                return new RegistraECalculaExpressao();
-            else if (argumentos.Any(x => x.TipoEntrada == TipoEntrada.OperadorPergunta))
-                return new CalcularConsulta();
+                && argumentos.First().TipoEntrada == TipoCaracterDeEntrada.Constante 
+                && argumentos.Last().TipoEntrada == TipoCaracterDeEntrada.ValorRomano)
+                return new ComandoApenasRegitrar();
+            else if (argumentos.Any(x => x.TipoEntrada == TipoCaracterDeEntrada.ConstantePrincipalSemValor) 
+                && !argumentos.Any(x => x.TipoEntrada == TipoCaracterDeEntrada.OperadorPergunta))
+                return new ComandoRegistraECalculaExpressao();
+            else if (argumentos.Any(x => x.TipoEntrada == TipoCaracterDeEntrada.OperadorPergunta))
+                return new ComandoCalcularConsulta();
             else
                 return null;
         }

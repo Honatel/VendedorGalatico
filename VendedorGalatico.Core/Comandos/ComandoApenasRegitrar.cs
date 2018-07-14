@@ -9,9 +9,9 @@ using VendedorGalatico.Core.TagsOfInput;
 
 namespace VendedorGalatico.Core.Comandos
 {
-    public class ApenasRegitrar : Comando
+    public class ComandoApenasRegitrar : Comando
     {
-        public override ResultProcessamento Executar(string[] inputString, List<TagsDeEntrada> tagsEntradas)
+        public override ResultProcessamento Executar(string[] inputString, List<CaracterDeEntrada> tagsEntradas)
         {
             try
             {

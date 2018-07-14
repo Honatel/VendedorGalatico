@@ -9,17 +9,17 @@ using VendedorGalatico.Core.TagsOfInput;
 
 namespace VendedorGalatico.Core.Comandos
 {
-    public class RegistraECalculaExpressao : Comando
+    public class ComandoRegistraECalculaExpressao : Comando
     {
-        public override ResultProcessamento Executar(string[] inputString, List<TagsDeEntrada> tagsEntradas)
+        public override ResultProcessamento Executar(string[] inputString, List<CaracterDeEntrada> tagsEntradas)
         {
             try
             {
-                var constatantes = GetTagsDeConstantesSalvas(tagsEntradas.Where(x => x.TipoEntrada == TipoEntrada.Constante).ToList());// obtive as contantes que estão armazenadas.
-                var consSemValor = tagsEntradas.First(x => x.TipoEntrada == TipoEntrada.ConstantePrincipalSemValor);// obtive as contantes sem valor.
+                var constatantes = GetTagsDeConstantesSalvas(tagsEntradas.Where(x => x.TipoEntrada == TipoCaracterDeEntrada.Constante).ToList());// obtive as contantes que estão armazenadas.
+                var consSemValor = tagsEntradas.First(x => x.TipoEntrada == TipoCaracterDeEntrada.ConstantePrincipalSemValor);// obtive as contantes sem valor.
 
-                consSemValor.Valor = CalcularExpressao(constatantes, Convert.ToInt32(tagsEntradas.First(x => x.TipoEntrada == TipoEntrada.ValorNumerico).NomeTag));
-                consSemValor.TipoEntrada = TipoEntrada.ConstantePrincipalComValor;
+                consSemValor.Valor = CalcularExpressao(constatantes, Convert.ToInt32(tagsEntradas.First(x => x.TipoEntrada == TipoCaracterDeEntrada.ValorNumerico).NomeTag));
+                consSemValor.TipoEntrada = TipoCaracterDeEntrada.ConstantePrincipalComValor;
 
                 TagsArmazenadas.Add(consSemValor);
 
@@ -37,7 +37,7 @@ namespace VendedorGalatico.Core.Comandos
             }
         }
 
-        private double CalcularExpressao(List<TagsDeEntrada> constatantes, int valor)
+        private double CalcularExpressao(List<CaracterDeEntrada> constatantes, int valor)
         {
             int result = GetValorExpressaoRomanos(constatantes);
 

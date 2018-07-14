@@ -9,20 +9,20 @@ using VendedorGalatico.Core.TagsOfInput;
 
 namespace VendedorGalatico.Core.Comandos
 {
-    public class CalcularConsulta : Comando
+    public class ComandoCalcularConsulta : Comando
     {
-        public override ResultProcessamento Executar(string[] inputString, List<TagsDeEntrada> tagsEntradas)
+        public override ResultProcessamento Executar(string[] inputString, List<CaracterDeEntrada> tagsEntradas)
         {
             try
             {
                 double valorConstantes;
                 var constatantes = GetTagsDeConstantesSalvas(tagsEntradas.Where(
-                                                                x => x.TipoEntrada == TipoEntrada.Constante
-                                                                || x.TipoEntrada == TipoEntrada.ConstantePrincipalSemValor
+                                                                x => x.TipoEntrada == TipoCaracterDeEntrada.Constante
+                                                                || x.TipoEntrada == TipoCaracterDeEntrada.ConstantePrincipalSemValor
                                                              ).ToList());
 
-                if (constatantes.Any(x => x.TipoEntrada == TipoEntrada.ConstantePrincipalSemValor))
-                    valorConstantes = CalcularExpressao(constatantes, constatantes.First(x => x.TipoEntrada == TipoEntrada.ConstantePrincipalComValor).Valor);
+                if (constatantes.Any(x => x.TipoEntrada == TipoCaracterDeEntrada.ConstantePrincipalComValor))
+                    valorConstantes = CalcularExpressao(constatantes, constatantes.First(x => x.TipoEntrada == TipoCaracterDeEntrada.ConstantePrincipalComValor).Valor);
                 else
                     valorConstantes = GetValorExpressaoRomanos(constatantes);
 
@@ -36,7 +36,7 @@ namespace VendedorGalatico.Core.Comandos
             }
         }
 
-        private object GetstringValues(List<TagsDeEntrada> constatantes)
+        private object GetstringValues(List<CaracterDeEntrada> constatantes)
         {
             var text = "";
 
@@ -46,9 +46,9 @@ namespace VendedorGalatico.Core.Comandos
             return text;
         }
 
-        private double CalcularExpressao(List<TagsDeEntrada> constatantes, double valor)
+        private double CalcularExpressao(List<CaracterDeEntrada> constatantes, double valor)
         {
-            int result = GetValorExpressaoRomanos(constatantes.Where(x => x.TipoEntrada == TipoEntrada.Constante).ToList());
+            int result = GetValorExpressaoRomanos(constatantes.Where(x => x.TipoEntrada == TipoCaracterDeEntrada.Constante).ToList());
 
             return result * valor;
         }
